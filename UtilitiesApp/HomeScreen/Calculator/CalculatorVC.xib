@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalculatorVC" customModule="UtilitiesApp" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RRc-3Y-CVg">
+                    <rect key="frame" x="0.0" y="44" width="414" height="31"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVB-3d-ihm">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="31"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72N-1J-Jmv" userLabel="Back">
+                            <rect key="frame" x="0.0" y="0.0" width="44" height="31"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="eW0-Li-8qz"/>
+                            </constraints>
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="lessthan" catalog="system"/>
+                            <connections>
+                                <action selector="goBack:" destination="-1" eventType="touchUpInside" id="8Ud-P0-HgM"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" red="0.10606458970716784" green="0.0" blue="0.19215702510380245" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="72N-1J-Jmv" firstAttribute="top" secondItem="RRc-3Y-CVg" secondAttribute="top" id="BBt-gC-nff"/>
+                        <constraint firstAttribute="bottom" secondItem="72N-1J-Jmv" secondAttribute="bottom" id="BXh-14-jJH"/>
+                        <constraint firstItem="72N-1J-Jmv" firstAttribute="leading" secondItem="RRc-3Y-CVg" secondAttribute="leading" id="CyN-x8-ekb"/>
+                        <constraint firstAttribute="trailing" secondItem="vVB-3d-ihm" secondAttribute="trailing" id="Yty-Cd-yqG"/>
+                        <constraint firstItem="vVB-3d-ihm" firstAttribute="leading" secondItem="RRc-3Y-CVg" secondAttribute="leading" id="bhJ-wa-ddZ"/>
+                        <constraint firstItem="vVB-3d-ihm" firstAttribute="top" secondItem="RRc-3Y-CVg" secondAttribute="top" id="cTx-K7-1wT"/>
+                        <constraint firstAttribute="bottom" secondItem="vVB-3d-ihm" secondAttribute="bottom" id="tr2-jX-iY4"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.85098039215686272" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="tintColor" red="0.85098039215686272" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="RRc-3Y-CVg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="12O-Cb-cte"/>
+                <constraint firstItem="RRc-3Y-CVg" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="AWi-eX-F7d"/>
+                <constraint firstItem="RRc-3Y-CVg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="dYN-7W-rV6"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="56.919642857142854"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="lessthan" catalog="system" width="128" height="111"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
