@@ -148,6 +148,7 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.85098039215686272" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="Sgc-7a-Dtk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="87c-db-sGD"/>
                 <constraint firstItem="Sgc-7a-Dtk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="87" id="8Gs-I6-7bE"/>
                 <constraint firstItem="gmc-Zm-NEc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="153" id="NQj-5G-hLO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="8go-HD-du3" secondAttribute="bottom" constant="8" id="OMH-kW-AqM"/>

@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RandomTaskVC" customModule="UtilitiesApp" customModuleProvider="target">
             <connections>
+                <outlet property="task" destination="nvB-8p-yPG" id="GFS-zk-l54"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,13 +18,94 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="MxB-u0-xA1">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="74w-V6-VV3">
+                            <rect key="frame" x="0.0" y="44" width="414" height="31"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Random Task" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyw-92-eiq">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="31"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQ4-Cd-zwl" userLabel="Back">
+                                    <rect key="frame" x="0.0" y="0.0" width="44" height="31"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="44" id="b5S-Je-sby"/>
+                                    </constraints>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="lessthan" catalog="system"/>
+                                    <connections>
+                                        <action selector="goBack:" destination="-1" eventType="touchUpInside" id="KWs-ez-iWp"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" red="0.1060645897" green="0.0" blue="0.19215702509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="dyw-92-eiq" firstAttribute="leading" secondItem="74w-V6-VV3" secondAttribute="leading" id="8ee-Pw-gw8"/>
+                                <constraint firstAttribute="bottom" secondItem="UQ4-Cd-zwl" secondAttribute="bottom" id="OfZ-w0-5yE"/>
+                                <constraint firstAttribute="trailing" secondItem="dyw-92-eiq" secondAttribute="trailing" id="TlS-0C-ID3"/>
+                                <constraint firstItem="UQ4-Cd-zwl" firstAttribute="top" secondItem="74w-V6-VV3" secondAttribute="top" id="Wav-kG-UhC"/>
+                                <constraint firstAttribute="bottom" secondItem="dyw-92-eiq" secondAttribute="bottom" id="hLY-Ze-sbU"/>
+                                <constraint firstItem="UQ4-Cd-zwl" firstAttribute="leading" secondItem="74w-V6-VV3" secondAttribute="leading" id="o9L-Nw-JZb"/>
+                                <constraint firstItem="dyw-92-eiq" firstAttribute="top" secondItem="74w-V6-VV3" secondAttribute="top" id="wqd-mS-8Ai"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvB-8p-yPG">
+                            <rect key="frame" x="45" y="173" width="324" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLL-Ir-E0D">
+                            <rect key="frame" x="122" y="432" width="168" height="34"/>
+                            <color key="backgroundColor" red="0.93333333333333335" green="0.396078431372549" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Give me a new task">
+                                <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="16"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="SNY-7d-bSH"/>
+                    <color key="backgroundColor" red="0.85098039219999999" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" red="0.85098039219999999" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="nvB-8p-yPG" firstAttribute="top" secondItem="74w-V6-VV3" secondAttribute="bottom" constant="98" id="7vO-V8-iFw"/>
+                        <constraint firstItem="KLL-Ir-E0D" firstAttribute="top" secondItem="nvB-8p-yPG" secondAttribute="bottom" constant="235" id="cjC-EW-lWQ"/>
+                        <constraint firstItem="74w-V6-VV3" firstAttribute="trailing" secondItem="SNY-7d-bSH" secondAttribute="trailing" id="dWY-QE-I3A"/>
+                        <constraint firstItem="nvB-8p-yPG" firstAttribute="leading" secondItem="SNY-7d-bSH" secondAttribute="leading" constant="45" id="fSc-7m-9OB"/>
+                        <constraint firstItem="SNY-7d-bSH" firstAttribute="trailing" secondItem="nvB-8p-yPG" secondAttribute="trailing" constant="45" id="jta-zl-dBW"/>
+                        <constraint firstItem="74w-V6-VV3" firstAttribute="leading" secondItem="SNY-7d-bSH" secondAttribute="leading" id="pbC-Jn-6L0"/>
+                        <constraint firstItem="SNY-7d-bSH" firstAttribute="trailing" secondItem="KLL-Ir-E0D" secondAttribute="trailing" constant="124" id="uYg-Og-wm3"/>
+                        <constraint firstItem="74w-V6-VV3" firstAttribute="top" secondItem="SNY-7d-bSH" secondAttribute="top" id="xhB-Ap-o0k"/>
+                    </constraints>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.85098039215686272" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <color key="tintColor" systemColor="systemYellowColor"/>
-            <point key="canvasLocation" x="132" y="57"/>
+            <point key="canvasLocation" x="131.8840579710145" y="56.919642857142854"/>
         </view>
     </objects>
     <resources>
+        <image name="lessthan" catalog="system" width="128" height="111"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
